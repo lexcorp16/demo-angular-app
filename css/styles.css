@@ -1,0 +1,19 @@
+* {
+  font-family: 'Proza Libre', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em 4em 0 4em;
+}
+
+.slider {
+  width: 50%;
+}
+
+.title {
+  margin-bottom: 3em;
+}

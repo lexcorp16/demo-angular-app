@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Visualization</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://paystack.com/favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Proza Libre' rel='stylesheet'>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="container" ng-app="ngApp" ng-controller="sliderController">
+      <h1 class="title">Share of Revenue</h1>
+      <md-slider
+        class="slider md-primary"
+        ng-model="noOfCustomers"
+        ng-change="calculatePercent()"
+        min="1"
+        max="{{ maxValue }}"
+        aria-label="slider"
+        md-discrete
+      >
+      </md-slider>
+      <p>
+        Your top
+        <strong>{{ noOfCustomers }}</strong>
+        paying customers brought in
+        <strong>~ {{ percent || 0 }}%</strong>
+        of your revenue within this period.
+      </p>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="components/slider.ctr.js"></script>
+    <script src="components/slider.fac.js"></script>
+  </body>
+</html>
